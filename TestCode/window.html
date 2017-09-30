@@ -5,10 +5,20 @@
 function opennew(){
     window.open("http://www.baidu.com");
 }
+
+function closecurrent() {
+ window.close();
+}
+
+function movewindow(x, y) {
+ window.moveTo(x, y);
+}
 </script>
 </head>
 <body>
 <p>click to open baidu web</p>
 <button type="button" onclick="opennew()">new window</button>
+<button type="button" onclick="closecurrent()">close window</button>
+<button type="button" onclick="movewindow(100, 100)">move window</button>
 </body>
 </html>
