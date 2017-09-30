@@ -16,12 +16,24 @@ function toggleColor() {
  else
   element.style.color = "blue";
 }
+
+function ToggleVisible() {
+ var element = document.getElementById("id1");
+ if(element.style.visibility == 'hidden') {
+  element.style.visibility = 'visible';
+ } else if(element.style.visibility == "") {
+  element.style.visibility = 'visible';
+  element.innerHTML = "style.visibility is null";
+ } else if(element.style.visibility == "visible") {
+  element.style.visibility = 'hidden';
+ }
+}
 </script>
 </head>
 <body>
 
 <h1 id="id1">My Heading 1</h1>
 <button type="button" onclick="toggleColor();">Click Here!</button>
-
+<button type="button" onclick="ToggleVisible();">Visibility</button>
 </body>
 </html>
