@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+</head>
+<script type="text/javascript">
+function toggleColor() {
+ var element = document.getElementById("id1");
+// element.innerHTML = element.style.color;
+ if(element.style.color == "red" || element.style.color == "") {
+  if(element.style.color == "")
+   element.innerHTML = "color null"
+  else
+   element.innerHTML = "color blue"
+  element.style.color = 'blue';
+ } else if(element.style.color == "blue")
+  element.style.color = 'red';
+ else
+  element.style.color = "blue";
+}
+</script>
+</head>
+<body>
+
+<h1 id="id1">My Heading 1</h1>
+<button type="button" onclick="toggleColor();">Click Here!</button>
+
+</body>
+</html>
