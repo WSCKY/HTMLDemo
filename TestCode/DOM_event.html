@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function changetext(id) {
+ id.innerHTML = "click detected!";
+}
+function showdate() {
+ document.getElementById("date").innerHTML = Date();
+}
+function changeUpperCase(id) {
+ id.value = id.value.toUpperCase();
+}
+function mouseOver(id) {
+ id.innerHTML = "Thank you!";
+}
+function mouseOut(id) {
+ id.innerHTML = "move your pointer to here."
+}
+function mousepress(id) {
+ id.style.backgroundColor = "#1ec5e5";
+ id.innerHTML = "mouse pressed!";
+}
+function mouserelease(id) {
+ id.style.backgroundColor = "blue";
+ id.innerHTML = "mouse released!";
+}
+</script>
+</head>
+<body>
+<h1 onclick="this.innerHTML='Thank you!'">please click this text</h1>
+<h1 onclick="changetext(this)">please click this text</h1>
+<button onclick="showdate()">Show Date</button>
+<p id="date"></p>
+please input any characters: <input type="text" onchange="changeUpperCase(this)" />
+<p onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" 
+style="background-color:green;width:240px;height:10px;padding:20px;color:#ffffff;">move your pointer to here.</p>
+<p onmousedown="mousepress(this)" onmouseup="mouserelease(this)" 
+style="background-color:blue;width:240px;height:10px;padding:20px;color:#ffffff;">mouse released!</p>
+</body>
+</html>
